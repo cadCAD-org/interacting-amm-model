@@ -92,7 +92,7 @@ def kpi_slippage_volatility(df: DataFrame) -> float:
     s = normalized_slippage(df.uniswap_reserve_token_1,
                             df.uniswap_reserve_token_2,
                             DEFAULT_SWAP)
-    kpi = s.std().mean()
+    kpi = s.std()
     return kpi
 
 
